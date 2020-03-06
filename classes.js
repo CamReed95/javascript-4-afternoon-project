@@ -30,9 +30,20 @@
 */
 
 //Code Here
+class Employee {
+  constructor(first_name, last_name, email, age) {
+    this.first_name = first_name;
+    this.last_name = last_name;
+    this.email = email;
+    this.age = age;
+  }
 
+  makeWidget(Employee) {
+    return this.first_name + ' ' + this.last_name + ' Widget'
+  } 
+} 
 
-////////// PROBLEM 2 //////////
+////////// PROBLEM 2 ////////// 
 
 /*
   Next, make a manager for Widget Co. that extends Employee
@@ -47,9 +58,22 @@
   Call your new class Manager
 */
 
-//Code Here
+//Code Here 
+// Super
 
-
+class Manager extends Employee {
+  constructor(first_name, last_name, email, age) {
+    super(first_name, last_name, email, age)
+    this.reports = [];
+  }
+    hire (bananas) {
+      this.reports.push(bananas)
+    }
+  
+    fire (index) {
+    this.reports.splice(index, 1)
+  }
+}
 ////////// PROBLEM 3 //////////
 
 /*
