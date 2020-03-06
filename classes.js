@@ -102,13 +102,23 @@ super(first_name, last_name, email, age, reports, hire, fire)
 this.title = 'Not a manager';
 this.bonus = 0;
 
- function (reports) {
-  this.title 
-  } return this.title 
-  function (bonus) {
-    this.fire  
-  } return this.bonus += 100
-
+hire(employee) {
+  super.hire(employee)
+  let i = this.reports.length;
+  if (i >= 1 && i <=3) {
+    this.title = "Barely Manager"
+  } else if (i >= 4 && i <= 10) {
+    this.title = "Mostly Manager"
+  } else if (i >= 11 && i <= 50) {
+    this.title = "Manager"
+  } else if (i >= 51 && i <= 100) {
+    this.title = "Manager Plus"
+  } else {
+    this.title = "Bestest Manager"
+  }
+}
+fire() {
+  this.bonus += 100;
 }
 
 
